@@ -1,0 +1,144 @@
+/* Ovde je stil za drugi nav */
+
+.second-nav {
+    border: 2px solid gray;
+    border-radius: 6px;
+    width: 200px;
+    position: absolute;
+    left: 30px;
+    top: 230px;
+    z-index: 1;
+    background: white;
+    height: 800px;
+}
+
+.second-nav h3, .second-nav h4 {
+    margin-left: 20px;
+}
+
+.second-nav button {
+    position: relative;
+    bottom: -90px;
+    left: 30px;
+}
+
+.naslov {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Ovde je stil za main */
+
+main {
+    position: relative;
+    top: 35px;
+    left: 280px;
+    width: 70vw;
+    margin-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    min-width: 200px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    border: 1px solid gray;
+    border-radius: 6px;
+    background: #6c757d;
+    color: white;
+    height: 32px;
+}
+
+.navi {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.nav-dugme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-dugme button {
+    width: 35px;
+}
+
+.nav-dugme .glavni {
+    width: 80px;
+}
+
+.mail {
+    background-color: #e8d1b7;
+    margin-top: 60px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.mail h2 {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.mail div {
+    display: grid;   
+    justify-content: center;
+}
+
+.mail div input {
+    height: 30px;
+    margin-top: 30px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 746px) {
+    .mail {
+        display: none;
+    }
+
+    .naslov {
+        display: none;
+    }
+
+    .second-nav {
+        display: none;
+    }
+
+    main {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    main {
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+
+

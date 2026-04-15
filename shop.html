@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Main CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-shop.css" />
+    <link rel="icon" href="slike/logo-v2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+   <nav class="main-nav navbar navbar-expand-lg navbar-expand-md bg-body-tertiary">
+  <div class="container-fluid">
+    <img class="logo" src="slike/logo-v2.png" alt="slika-logoa">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" title="Pogledajte nasu pocetnu stranicu" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Pogledajte nasu ponudu" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Pogledajte informacije o nama" href="#">O nama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Kontaktirajte nas" href="#">Kontakt</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" title="Pogledajte rasprodaju" href="shop.html">Rasprodaja</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <a onclick="cenaKorpe()" class="linkovi" title="Pregledajte korpu" href="#"><span class="material-symbols-outlined m-2">shopping_cart</span></a>
+        <a class="linkovi" title="Prijavite se" href="login.html"><span class="material-symbols-outlined m-2">account_circle</span></a>
+      </form>
+    </div>
+  </div>
+</nav>
+    <h2 class="naslov">View All Products</h2>
+    <nav class="second-nav">
+      <h3>Filteri</h3>
+      <h4>Cena</h4>
+      <h4>Brend</h4>
+      <ul>
+        <li>
+          <input type="checkbox" name="zara" id="zara" />
+          <label for="zara">Zara</label>
+        </li>
+        <li>
+          <input type="checkbox" name="him" id="him" />
+          <label for="him">H&M</label>
+        </li>
+        <li>
+          <input type="checkbox" name="berska" id="berska" />
+          <label for="berska">BERSKA</label>
+        </li>
+        <li>
+          <input type="checkbox" name="koton" id="koton" />
+          <label for="koton">KOTON</label>
+        </li>
+      </ul>
+      <h4>Kategorije</h4>
+      <ul>
+        <li>
+          <input type="checkbox" name="sako" id="sako" />
+          <label for="sako">Sako</label>
+        </li>
+        <li>
+          <input type="checkbox" name="majice" id="majice" />
+          <label for="majice">Majice</label>
+        </li>
+        <li>
+          <input type="checkbox" name="suknje" id="suknje" />
+          <label for="suknje">Suknje</label>
+        </li>
+        <li>
+          <input type="checkbox" name="kosulja" id="kosulja" />
+          <label for="kosulja">Kosulje</label>
+        </li>
+        <li>
+          <input type="checkbox" name="sve-stvari" id="sve-stvari" />
+          <label for="sve-stvari">Sve Stvari</label>
+        </li>
+      </ul>
+      <h4>Kolekcije</h4>
+      <ul>
+        <li>
+          <input type="checkbox" name="leto" id="leto" />
+          <label for="leto">Prolece/Leto</label>
+        </li>
+        <li>
+          <input type="checkbox" name="zima" id="zima" />
+          <label for="zima">Jesen/Zima</label>
+        </li>
+      </ul>
+      <h4>Boje</h4>
+      <h4>Drugo</h4>
+      <button>Primeni Filtere</button>
+    </nav>
+    <main>
+      <div class="product-card">
+        <img src="slike/farmerke-m.jpg" alt="slika farmerki" />
+        <p>Muske Farmerke</p>
+        <h3>$35 RSD</h3>
+        <button onclick="dodajNaIznos(35)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/farmerke-v2.jpg" alt="slika farmerki" />
+        <p>Zenske Farmerke</p>
+        <h3>$32</h3>
+        <button onclick="dodajNaIznos(32)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/farmerke.jpg" alt="slika farmerki" />
+        <p>Zenske Farmerke</p>
+        <h3>$35</h3>
+        <button onclick="dodajNaIznos(35)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/jakna-braon.jpg" alt="slika jakne" />
+        <p>Muska Jakna</p>
+        <h3>$49</h3>
+        <button onclick="dodajNaIznos(49)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/jakna.jpg" alt="slika jakne" />
+        <p>Zenska Jakna</p>
+        <h3>$49</h3>
+        <button onclick="dodajNaIznos(49)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/kosulja.jpg" alt="slika kosulje" />
+        <p>Muska Kosulja</p>
+        <h3>$39</h3>
+        <button onclick="dodajNaIznos(39)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/kosulja-v2.jpg" alt="slika kosulje" />
+        <p>Muska Kosulja</p>
+        <h3>$32</h3>
+        <button onclick="dodajNaIznos(32)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/majica.jpg" alt="slika majice" />
+        <p>Zenska Majica</p>
+        <h3>$19</h3>
+        <button onclick="dodajNaIznos(19)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/sako-m.jpg" alt="slika sakoa" />
+        <p>Muski Sako</p>
+        <h3>$59</h3>
+        <button onclick="dodajNaIznos(59)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/sako.jpg" alt="slika sakoa" />
+        <p>Zenski Sako</p>
+        <h3>$45</h3>
+        <button onclick="dodajNaIznos(45)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/suknja.jpg" alt="slika suknje" />
+        <p>Suknja</p>
+        <h3>$24</h3>
+        <button onclick="dodajNaIznos(24)">Dodaj u Korpu</button>
+      </div>
+      <div class="product-card">
+        <img src="slike/suknja-v2.jpg" alt="slika suknje" />
+        <p>Suknja</p>
+        <h3>$24</h3>
+        <button onclick="dodajNaIznos(24)">Dodaj u Korpu</button>
+      </div>
+      <div class="navi">
+        <div class="nav-dugme">
+          <button class="glavni">Nazad</button>
+          <button>1</button>
+          <button class="active">2</button>
+          <button>...</button>
+          <button>9</button>
+          <button>10</button>
+          <button class="glavni">Sledece</button>
+        </div>
+      </div>
+    </main>
+    <div class="mail">
+        <h2>OSTANITE UPUCENI U NASE <br> NAJBOLJE POPUSTE!</h2>
+        <div>
+            <input class="mail-btn" type="email" name="mail" placeholder="Upisi svoju email adresu...">
+            <button class="mail-btn">Prijavi se za Obavestenja</button>
+
+        </div>
+    </div>
+    <!--Footer-->
+<footer class="mt-5">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col-12 col-md-3 col-lg-3 mx-5 mx-md-3">
+        <ul class="list-unstyled text-secondary">
+          <h3>SHOP</h3>
+          <li>Haljine</li>
+          <li>Jakne</li>
+          <li>Obuca i Torbe</li>
+          <li>Suknje</li>
+          <li>Poklon Kartica</li>
+          <li>Popusti</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mx-5 mx-md-3">
+        <ul class="list-unstyled text-secondary">
+          <h3>INFORMACIJE</h3>
+          <li>O Nama</li>
+          <li>Uslovi Koriscenja</li>
+          <li>Politika Privatnosti</li>
+          <li>Posiljke i Vracanja</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mx-5 mx-md-3">
+        <ul class="list-unstyled text-secondary">
+          <h3>KORISNICKA PODRSKA</h3>
+          <li>Kontakt</li>
+          <li>Pomoc</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--Bootstrap Script-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!--Main Script-->
+  <script src="js/main.js"></script>
+  </body>
+</html>

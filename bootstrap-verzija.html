@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Zadatak</title>
+    <link rel="icon" href="slike/logo-v2.png">
+    <!--Bootsrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Main CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-bootstrap-v.css">
+    <!--Google Icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Nav bar-->
+      <nav class="main-nav navbar navbar-expand-lg navbar-expand-md bg-body-tertiary">
+  <div class="container-fluid">
+    <img class="logo" src="slike/logo-v2.png" alt="slika-logoa">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" title="Pogledajte nasu pocetnu stranicu" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Pogledajte nasu ponudu" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Pogledajte informacije o nama" href="#informacije">O nama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Kontaktirajte nas" href="#">Kontakt</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" title="Pogledajte rasprodaju" href="shop.html">Rasprodaja</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <a class="linkovi" title="Pregledajte korpu" href="bootstrap-verzija.html"><span class="material-symbols-outlined m-2">shopping_cart</span></a>
+        <a class="linkovi" title="Prijavite se" href="login.html"><span class="material-symbols-outlined m-2">account_circle</span></a>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--Main Body-->
+<div class="row">
+  <div class="col-12 d-flex justify-content-center mt-3">
+    <h1>Checkout</h1>
+  </div>
+</div>
+<div class="row review">
+  <div class="col-sm-12 col-md-4 offset-md-2 col-lg-4 offset-lg-2 m-4 border rounded-2 p-4 order-lg-2 order-md-2">
+    <div class="row red">
+      <div class="col-4">
+        <img class="img-fluid" src="slike/farmerke-v2.jpg" alt="slika-farmerki">
+      </div>
+      <div class="col-4">
+        <p class="">Farmerke</p>
+        <p>Velicina: M</p>
+      </div>
+      <div class="col-4">
+        <p class="h4">3200 RSD</p>
+      </div>
+    </div>
+    <div class="row red mt-3">
+      <div class="col-4">
+        <img class="img-fluid" src="slike/jakna.jpg" alt="slika jakne">
+      </div>
+      <div class="col-4">
+        <p class="">Jakna</p>
+        <p>Velicina: M</p>
+      </div>
+      <div class="col-4">
+        <p class="h4">4999 RSD</p>
+      </div>
+    </div>
+    <div class="row red mt-4">
+      <div class="col-4">
+        <img class="img-fluid" src="slike/kosulja.jpg" alt="slika kosulje">
+      </div>
+      <div class="col-4">
+        <p class="">Muska kosulja</p>
+        <p>Velicina: L</p>
+      </div>
+      <div class="col-4">
+        <p class="h4">3999 RSD</p>
+      </div>
+    </div>
+    <div class="row red mt-4">
+      <div class="col-4">
+        <img class="img-fluid" src="slike/majica.jpg" alt="slika majice">
+      </div>
+      <div class="col-4">
+        <p class="">Zenska majica</p>
+        <p>Velicina: S</p>
+      </div>
+      <div class="col-4">
+        <p class="h4">1999 RSD</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-5 d-flex justify-content-between">
+          <p class="h4">Total</p>
+          <p class="h4">14197 RSD</p>
+      </div>
+    </div>
+      <form>
+        <div class="row align-items-center mt-4">       
+            <div class="col-7">
+              <div class="form-group">
+                <input id="promo-input" class="form-control" type="text" placeholder="Add promo code">
+              </div>
+            </div>
+            <div class="col-5 mt-2">
+            <button onclick="validateAndNotyfy()" class="btn btn-secondary w-100">Apply</button>
+            </div>
+        </div>
+      </form>
+  </div>
+  <div class="col-12 col-md-6 col-lg-5 m-4 order-lg-1 order-md-1">
+    <h3>Informacije o isporuci</h3>
+    <form class="border rounded-2 p-4 mt-4">
+      <div class="row">
+        <div class="col-5">
+          <div class="form-group">
+            <label for="ime" class="">Ime</label>
+            <input type="text" name="ime" id="ime" class="form-control">
+          </div> 
+        </div>
+        <div class="col-5">
+          <div class="form-group">
+            <label for="prezime">Prezime</label>
+            <input type="text" name="prezime" id="prezime" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <label for="adresa">Adresa</label>
+        <input type="text" name="adresa" id="adresa" class="form-control">
+      </div>
+      <div class="form-group mt-3">
+        <label for="ulica">Ulica</label>
+        <input type="text" name="ulica" id="ulica" class="form-control">
+      </div>
+      <div class="row mt-3">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="drzava">Drzava</label>
+            <select name="drzava" id="drzava" class="form-control">
+              <option value="srbija">Srbija</option>
+              <option value="hrvatska">Hrvatska</option>
+              <option value="crna-gora">Crna Gora</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="grad">Grad</label>
+            <select name="grad" id="grad" class="form-control">
+              <option value="beograd">Beograd</option>
+              <option value="novi-sad">Novi Sad</option>
+              <option value="nis">Nis</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="zip">Zipcode</label>
+            <input type="text" name="zip" id="zip" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="form-check-inline mt-4">
+        <input type="checkbox" name="cek" id="cek" class="form-check-input">
+        <label for="cek" class="form-check-label">Sacuvajte svoje informacije</label>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-5 m-4 p-3">
+     <h3>Informacije o placanju</h3>
+     <div>
+      <form action="#" class="border rounded-2 mt-4 p-4">
+        <div class="row align-items-center">
+            <div class="col-6">
+              <button class="btn dugme-paypal">
+                <img src="slike/paypal-logo.png" alt="slika patpala" class="img-fluid">
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-secondary col-12 mt-2">Kes</button>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="ime-kartice">Ime</label>
+          <input type="text" name="ime-kartice" id="ime-kartice" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="broj-kartice">Broj Kartice</label>
+          <input type="text" name="broj-kartice" id="broj-kartice" class="form-control">
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="form-group">
+              <label for="godina">Mesec/Godina</label>
+              <input type="month" name="godina" id="godina" class="form-control">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input type="number" name="cvc" id="cvc" class="form-control">
+            </div>
+          </div>
+        </div>
+          <div>
+            <button class="btn btn-secondary w-100 mt-3">Plati</button>
+          </div>  
+      </form>
+     </div>
+  </div>
+</div>
+<!--Footer-->
+<footer class="mt-5">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col-12 col-md-3 col-lg-3 mx-5 mx-md-3">
+        <ul class="list-unstyled text-secondary">
+          <h3>SHOP</h3>
+          <li>Haljine</li>
+          <li>Jakne</li>
+          <li>Obuca i Torbe</li>
+          <li>Suknje</li>
+          <li>Poklon Kartica</li>
+          <li>Popusti</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mx-5 mx-md-3">
+        <ul class="list-unstyled text-secondary">
+          <h3>INFORMACIJE</h3>
+          <li>O Nama</li>
+          <li>Uslovi Koriscenja</li>
+          <li>Politika Privatnosti</li>
+          <li>Posiljke i Vracanja</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mx-5 mx-md-3">
+        <ul class="list-unstyled text-secondary">
+          <h3>KORISNICKA PODRSKA</h3>
+          <li>Kontakt</li>
+          <li>Pomoc</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--Bootstram Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!--Main Script-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p, li, a {
+    font-size: 1rem;
+}
+
+
+li {
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.main-nav {
+    background: #e8d1b7 !important;
+    height: 100px;
+}
+
+.linkovi {
+    color: black !important;
+}
